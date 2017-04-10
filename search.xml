@@ -4,19 +4,112 @@
     
     <entry>
       <title><![CDATA[demo]]></title>
-      <url>/2017/04/09/20170419/</url>
-      <content type="html"><![CDATA[<html><br><head><br><meta charset="utf-8"><br><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br><title>Examples</title><br><meta name="description" content=""><br><meta name="keywords" content=""><br><link href="" rel="stylesheet"><br><style type="text/css"><br>    <em>{<br>        padding:0;<br>        margin:0;<br>    }<br>    .wrap{<br>        width:400px;<br>        height:300px;<br>        margin:50px auto;<br>    }<br>    .wrap .tab{<br>        width:100px;<br>        height:300px;<br>        float:left;<br>    }<br>    .wrap .tab li{<br>        width:90px;<br>        height:60px;<br>        margin-bottom:15px;<br>        list-style:none;<br>        background:#ddd;<br>        font:20px/60px “宋体”;<br>        float:left;<br>        text-align:center;<br>    }<br>    .wrap .tp{<br>        width:300px;<br>        height:300px;<br>        overflow:hidden;<br>        float:left;<br>    }<br>    .wrap .tp div{<br>        position:relative;<br>        width:300px;<br>        height:300px;<br>        display:none;<br>        overflow:hidden;<br>    }<br>    .wrap .tp div ul{<br>        position:absolute;<br>        height:20px;<br>        bottom:10px;<br>        left:50%;<br>    }<br>    .wrap .tp div ul li{<br>        width:20px;<br>        height:20px;<br>        border-radius:50%;<br>        background:#ddd;<br>        margin:0 5px;<br>        float:left;<br>        list-style:none;<br>        text-align:center;<br>        line-height:20px;<br>        cursor:pointer;<br>    }<br>    .wrap .tp div img{<br>        width:300px;<br>        height:300px;<br>        display:none;<br>    }<br>    .wrap .tp .show{display:block;}<br>    .wrap .tp .show .show{display:block;}<br></style><br></head><br><body><br>    <div class="wrap"><br>        <ul class="tab"><br>            <li>风景</li><br>            <li>鲜花</li><br>            <li>美女</li><br>            <li>汽车</li><br>        </ul><br>        <div class="tp"><br>            <div class="show"><br>                <img class="show" src="images/f1.jpg"><br>                <img src="images/f2.jpg"><br>                <img src="images/f3.jpg"><br>                <ul></ul><br>            </div><br>            <div><br>                <img class="show" src="images/x1.jpg"><br>                <img src="images/x2.jpg"><br>                <img src="images/x3.jpg"><br>                <img src="images/x4.jpg"><br>                <ul></ul><br>            </div><br>            <div><br>                <img class="show" src="images/m1.jpg"><br>                <img src="images/m2.jpg"><br>                <img src="images/m3.jpg"><br>                <img src="images/m4.jpg"><br>                <img src="images/m5.jpg"><br>                <ul></ul><br>            </div><br>            <div><br>                <img class="show" src="images/q1.jpeg"><br>                <img src="images/q2.jpeg"><br>                <img src="images/q3.jpeg"><br>                <img src="images/q4.jpeg"><br>                <ul></ul><br>            </div><br>        </div><br>    </div><br>    <script><br>        var aLi = document.querySelectorAll(“.wrap .tab li”);<br>        var aBox = document.querySelectorAll(“.wrap .tp div”);<br>        var arr = [];<br>        var imgL=[];<br>        var ul = [];<br>        var aLi2=[];<br>        var index=0;<br>        for(i=0;i&lt;4;i++){<br>            ul[i] = aBox[i].querySelector(“ul”);<br>            // console.log(ul);<br>            arr[i]=aBox[i].querySelectorAll(“img”);<br>            aLi[i].i=i;<br>            aLi[i].onmouseenter=function(){<br>                for(j=0;j&lt;4;j++){<br>                aBox[j].className=””;};<br>                aBox[this.i].className=”show”;<br>                index=0;<br>            }<br>            imgL[i]=arr[i].length;<br>            // console.log(imgL);<br>            ul[i].innerHTML=””;<br>            for (j=0;j&lt;imgL[i];j++){<br>                ul[i].innerHTML +=”<li>“+(j+1)+”</li>“;<br>                ul[i].style.width=imgL[i]</em>30+”px”;<br>                ul[i].style.marginLeft=-imgL[i]*30/2+”px”;<br>            };<br>            aLi2[i] = ul[i].querySelectorAll(“.wrap .tp div ul li”);<br>            console.log(aLi2[i].length);<br>            for (j=0;j<aLi2[i].length;j++){
-                aLi2[i][j].i=i;
-                aLi2[i][j].j=j;
-                console.log(arr[i][j]);
-                aLi2[i][j].onmouseenter=function(){
-                    arr[this.i][index].className="";
-                    arr[this.i][this.j].className="show";
-                    index=this.j
+      <url>/2017/04/09/20170409/</url>
+      <content type="html"><![CDATA[<p>‘   <html><br>    <head><br>    <meta charset="utf-8"><br>    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>    <title>Examples</title><br>    <meta name="description" content=""><br>    <meta name="keywords" content=""><br>    <link href="" rel="stylesheet"><br>    <style type="text/css"><br>        <em>{<br>            padding:0;<br>            margin:0;<br>        }<br>        .wrap{<br>            width:400px;<br>            height:300px;<br>            margin:50px auto;<br>        }<br>        .wrap .tab{<br>            width:100px;<br>            height:300px;<br>            float:left;<br>        }<br>        .wrap .tab li{<br>            width:90px;<br>            height:60px;<br>            margin-bottom:15px;<br>            list-style:none;<br>            background:#ddd;<br>            font:20px/60px “宋体”;<br>            float:left;<br>            text-align:center;<br>        }<br>        .wrap .tp{<br>            width:300px;<br>            height:300px;<br>            overflow:hidden;<br>            float:left;<br>        }<br>        .wrap .tp div{<br>            position:relative;<br>            width:300px;<br>            height:300px;<br>            display:none;<br>            overflow:hidden;<br>        }<br>        .wrap .tp div ul{<br>            position:absolute;<br>            height:20px;<br>            bottom:10px;<br>            left:50%;<br>        }<br>        .wrap .tp div ul li{<br>            width:20px;<br>            height:20px;<br>            border-radius:50%;<br>            background:#ddd;<br>            margin:0 5px;<br>            float:left;<br>            list-style:none;<br>            text-align:center;<br>            line-height:20px;<br>            cursor:pointer;<br>        }<br>        .wrap .tp div img{<br>            width:300px;<br>            height:300px;<br>            display:none;<br>        }<br>        .wrap .tp .show{display:block;}<br>        .wrap .tp .show .show{display:block;}<br>    </style><br>    </head><br>    <body><br>        <div class="wrap"><br>            <ul class="tab"><br>                <li>风景</li><br>                <li>鲜花</li><br>                <li>美女</li><br>                <li>汽车</li><br>            </ul><br>            <div class="tp"><br>                <div class="show"><br>                    <img class="show" src="images/f1.jpg"><br>                    <img src="images/f2.jpg"><br>                    <img src="images/f3.jpg"><br>                    <ul></ul><br>                </div><br>                <div><br>                    <img class="show" src="images/x1.jpg"><br>                    <img src="images/x2.jpg"><br>                    <img src="images/x3.jpg"><br>                    <img src="images/x4.jpg"><br>                    <ul></ul><br>                </div><br>                <div><br>                    <img class="show" src="images/m1.jpg"><br>                    <img src="images/m2.jpg"><br>                    <img src="images/m3.jpg"><br>                    <img src="images/m4.jpg"><br>                    <img src="images/m5.jpg"><br>                    <ul></ul><br>                </div><br>                <div><br>                    <img class="show" src="images/q1.jpeg"><br>                    <img src="images/q2.jpeg"><br>                    <img src="images/q3.jpeg"><br>                    <img src="images/q4.jpeg"><br>                    <ul></ul><br>                </div><br>            </div><br>        </div><br>        <script><br>            var aLi = document.querySelectorAll(“.wrap .tab li”);<br>            var aBox = document.querySelectorAll(“.wrap .tp div”);<br>            var arr = [];<br>            var imgL=[];<br>            var ul = [];<br>            var aLi2=[];<br>            var index=0;<br>            for(i=0;i&lt;4;i++){<br>                ul[i] = aBox[i].querySelector(“ul”);<br>                // console.log(ul);<br>                arr[i]=aBox[i].querySelectorAll(“img”);<br>                aLi[i].i=i;<br>                aLi[i].onmouseenter=function(){<br>                    for(j=0;j&lt;4;j++){<br>                    aBox[j].className=””;};<br>                    aBox[this.i].className=”show”;<br>                    index=0;<br>                }<br>                imgL[i]=arr[i].length;<br>                // console.log(imgL);<br>                ul[i].innerHTML=””;<br>                for (j=0;j&lt;imgL[i];j++){<br>                    ul[i].innerHTML +=”<li>“+(j+1)+”</li>“;<br>                    ul[i].style.width=imgL[i]</em>30+”px”;<br>                    ul[i].style.marginLeft=-imgL[i]*30/2+”px”;<br>                };<br>                aLi2[i] = ul[i].querySelectorAll(“.wrap .tp div ul li”);<br>                console.log(aLi2[i].length);<br>                for (j=0;j<aLi2[i].length;j++){
+                    aLi2[i][j].i=i;
+                    aLi2[i][j].j=j;
+                    console.log(arr[i][j]);
+                    aLi2[i][j].onmouseenter=function(){
+                        arr[this.i][index].className="";
+                        arr[this.i][this.j].className="show";
+                        index=this.j
+                    };
                 };
             };
-        };
-    </script><br></body><br></html>]]></content>
+        </script><br>    </body><br>    </html>‘</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小案例 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[demo]]></title>
+      <url>/2017/04/09/20170411/</url>
+      <content type="html"><![CDATA[<p>‘    &lt;!DOCTYPE html&gt;<br>    <html><br>    <head><br>    <meta charset="utf-8"><br>    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>    <title>Examples</title><br>    <meta name="description" content=""><br>    <meta name="keywords" content=""><br>    <link href="" rel="stylesheet"><br>    <style type="text/css"><br>        *{margin:0;padding:0;}</p>
+<pre><code>    #wrap{
+        width:200px;
+        height:500px;
+        margin:0 auto;
+    }
+    #up,#down{
+        color:#fff;
+        text-align:center;
+        line-height:25px;
+        background:#ddd;
+    }
+    #wrap #box{
+        width:200px;
+        height:450px;
+        overflow:hidden;
+    }
+    #wrap #list{
+        width:200px;
+        height:720px;
+    }
+    #wrap #list img{
+        width:200px;
+        height:240px;
+        list-style:none;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;wrap&quot;&gt;
+        &lt;div id=&quot;up&quot;&gt;向上&lt;/div&gt;
+        &lt;div id=&quot;box&quot;&gt;
+            &lt;div id=&quot;list&quot;&gt;
+                &lt;img src = &quot;http://omolotm19.bkt.clouddn.com/scroll1.png&quot;&gt;
+                &lt;img src = &quot;http://omolotm19.bkt.clouddn.com/scroll2.png&quot;&gt;
+                &lt;img src = &quot;http://omolotm19.bkt.clouddn.com/scroll3.png&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;down&quot;&gt;向下&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        var oWrap = document.getElementById(&quot;wrap&quot;),
+            oList = document.getElementById(&quot;list&quot;),
+            oUp = document.getElementById(&quot;up&quot;),
+            oDown = document.getElementById(&quot;down&quot;),
+            index=0,
+            time;
+            function goudan(b){
+                    oList.style.marginTop=index+&quot;px&quot;;
+                    if(b){
+                        index--;
+                        if(index==-270){
+                            clearInterval(time);
+                            oList.style.marginTop=-270+&quot;px&quot;;
+                        };
+                    }else{
+                        index++;
+                        if(index&gt;=0){
+                            clearInterval(time);
+                            oList.style.marginTop=0+&quot;px&quot;;
+                        };
+                    }
+            }
+            oUp.onmousedown=function(){
+                time=setInterval(&quot;goudan(true)&quot;,20);
+            };
+            oDown.onmousedown=function(){
+                time=setInterval(&quot;goudan(false)&quot;,20);
+            };
+            oUp.onmouseup=function(){
+               clearInterval(time);
+            };
+            oDown.onmouseup=function(){
+               clearInterval(time);
+            };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;&apos;
+</code></pre></style></head></html></p>]]></content>
       
         
         <tags>
