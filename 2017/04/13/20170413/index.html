@@ -7,7 +7,7 @@
 
     
 
-    <title>张海峰的博客</title>
+    <title>demo | 张海峰的博客</title>
     <meta name="author" content="张海峰">
     
     <meta name="description" content="看书 学习">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="demo"/>
     <meta property="og:site_name" content="张海峰的博客"/>
 
     
@@ -229,12 +229,12 @@
             <div class="article-title">
                 
     
-        <h1>无题</h1>
+        <h1>demo</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2017-04-12T16:11:15.679Z"><a href="/demo/index.html">2017-04-13</a></time>
+            <time class="pink-link-context" datetime="2017-04-12T16:00:03.000Z"><a href="/2017/04/13/20170413/">2017-04-13</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -242,6 +242,12 @@
 </span>
 
             
+    <div class="tags-row">
+        
+            <a href="/tags/小案例/" class="chip pink lighten-1">小案例</a>
+        
+    </div>
+
 
             <div class="toc pink-link-context hide-on-med-and-down">
     
@@ -249,15 +255,58 @@
 
 
             <div class="entry pink-link-context">
-                <p>&lt;!DOCTYPE html&gt;</p>
-<html><br><head><br><meta charset="utf-8"><br><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br><title>Examples</title><br><meta name="description" content=""><br><meta name="keywords" content=""><br><link href="" rel="stylesheet"><br><style type="text/css"><br>    .wrap{<br>        margin:50px auto;<br>        width:400px;<br>        height:100px;<br>    }<br></style><br></head><br><body><br>    <div class="wrap"><br>        <img src="images/0.png" id="fir"><br>        <img src="images/0.png" id="sec"><br>        <img src="images/d.png"><br>        <img src="images/0.png" id="thr"><br>        <img src="images/0.png" id="four"><br>        <img src="images/d.png"><br>        <img src="images/0.png" id="five"><br>        <img src="images/0.png" id="six"><br>    </div><br>    <script><br>        var oI1=document.getElementById(“fir”),<br>            oI2=document.getElementById(“sec”),<br>            oI3=document.getElementById(“thr”),<br>            oI4=document.getElementById(“four”),<br>            oI5=document.getElementById(“five”),<br>            oI6=document.getElementById(“six”);<br>            setInterval(goudan(),1000);<br>            function goudan(){<br>                var time=new Date(),<br>                    hh=time.getHours(),<br>                    mm=time.getMinutes(),<br>                    ss=time.getSeconds(),<br>                    a=Math.floor(hh/10),<br>                    b=Math.floor(hh%10),<br>                    c=Math.floor(mm/10),<br>                    d=Math.floor(mm%10),<br>                    e=Math.floor(ss/10),<br>                    f=Math.floor(ss%10),<br>                    oI=[oI1,oI2,oI3,oI4,oI5,oI6],<br>                    arr=[a,b,c,d,e,f];<br>                for(i=0;i<6;i++){
-                    oI[i].src="images/"+arr[i]+".png";
-                };
-                return goudan;
+                <pre><code>&lt;div class=&quot;wrap&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;fir&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;sec&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/d.png&quot; &gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;thr&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;four&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/d.png&quot; &gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;five&quot;&gt;
+    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;six&quot;&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    var oI1=document.getElementById(&quot;fir&quot;),
+        oI2=document.getElementById(&quot;sec&quot;),
+        oI3=document.getElementById(&quot;thr&quot;),
+        oI4=document.getElementById(&quot;four&quot;),
+        oI5=document.getElementById(&quot;five&quot;),
+        oI6=document.getElementById(&quot;six&quot;);
+        setInterval(goudan(),1000);
+        function goudan(){
+            var time=new Date(),
+                hh=time.getHours(),
+                mm=time.getMinutes(),
+                ss=time.getSeconds(),
+                a=Math.floor(hh/10),
+                b=Math.floor(hh%10),
+                c=Math.floor(mm/10),
+                d=Math.floor(mm%10),
+                e=Math.floor(ss/10),
+                f=Math.floor(ss%10),
+                oI=[oI1,oI2,oI3,oI4,oI5,oI6],
+                arr=[
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+a+&quot;.png&quot;,
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+b+&quot;.png&quot;,
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+c+&quot;.png&quot;,
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+d+&quot;.png&quot;,
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+e+&quot;.png&quot;,
+                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+f+&quot;.png&quot;,
+                ];
+            for(i=0;i&lt;6;i++){
+                oI[i].src=&quot;images/&quot;+arr[i]+&quot;.png&quot;;
             };
-    </script><br></body><br></html>
-
+            return goudan;
+        };
+&lt;/script&gt;
+</code></pre>
                 
+<p class="pink-link-context">
+    <a href="/2017/04/11/20170411/" rel="next" title="demo">
+    上一篇：demo
+  </a>
+</p>
+
 
 
 
