@@ -183,20 +183,22 @@
     <link href="http://yoursite.com/2017/04/09/20170409/"/>
     <id>http://yoursite.com/2017/04/09/20170409/</id>
     <published>2017-04-08T18:42:57.000Z</published>
-    <updated>2017-04-11T13:54:55.441Z</updated>
+    <updated>2017-04-13T15:32:12.600Z</updated>
     
-    <content type="html"><![CDATA[<p>做移动端开发，也会存在各种兼容问题，我做的是微信网站开发，<br><a id="more"></a><br>也是遇到不少兼容问题，用安卓测试的正常的页面，在ios下，会出现各种不同的效果，有时也很是郁闷。现在我搜集了一些移动端需要注意的问题，罗列如下，方便自己使用，有需要的朋友们也可以参考。<br>meta基础知识</p>
+    <content type="html"><![CDATA[<p>机器猫<br><a id="more"></a><br>用div 定位 和 倒角做的简单静态页面布局<br><a href="demo/index.html">在线展示</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;做移动端开发，也会存在各种兼容问题，我做的是微信网站开发，&lt;br&gt;
+      &lt;p&gt;机器猫&lt;br&gt;
     
     </summary>
     
-      <category term="html" scheme="http://yoursite.com/categories/html/"/>
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="css" scheme="http://yoursite.com/categories/html/css/"/>
+      <category term="html" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/html/"/>
+    
+      <category term="css" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/html/css/"/>
     
     
       <category term="小案例" scheme="http://yoursite.com/tags/%E5%B0%8F%E6%A1%88%E4%BE%8B/"/>
