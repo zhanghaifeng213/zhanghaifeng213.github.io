@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type = "text/css">
+    *{
+        padding:0;
+        margin:0;
+    }
+    #wrap{
+        position:relative;
+        margin:0 auto;
+        width:690px;
+        height:400px;
+        overflow:hidden;
+    }
+    #wrap #iWap{
+        width:4140px;
+        height:400px;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    #wrap #iWap img{
+        float:left;
+        width:690px;
+        height:400px;
+    }
+    #wrap #iLi{
+        position:absolute;
+        left:50%;
+        bottom:10px;
+        margin-left:-60px;
+        width:120px;
+        height:20px;
+        line-height:20px;
+    }
+    #wrap #iLi li{
+        width:14px;
+        height:14px;
+        border-radius:100%;
+        margin:3px;
+        list-style:none;
+        background:#fff;
+        float:left;
+    }
+    #wrap #iLi li.on{
+        background:#f60;
+    }
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="iWap">
+            <img src="http://omolotm19.bkt.clouddn.com/scroll1.png">
+            <img src="http://omolotm19.bkt.clouddn.com/scroll2.png">
+            <img src="http://omolotm19.bkt.clouddn.com/scroll3.png">
+            <img src="http://omolotm19.bkt.clouddn.com/slider01.jpg">
+            <img src="http://omolotm19.bkt.clouddn.com/slider02.jpg">
+            <img src="http://omolotm19.bkt.clouddn.com/slider03.jpg">
+        </ul>
+        <ul id="iLi">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var oWrap = document.querySelector("#wrap"),
+            aImg = document.querySelectorAll("#wrap img"),
+            oUl= document.querySelector("#wrap #iWap"),
+            aLi = document.querySelectorAll("#wrap ul li"),
+            len = aImg.length,
+            pos=[],
+            index=0;
+            for(i=0;i<len;i++){
+                pos[i]=-i*690;
+                aLi[i].i=i;
+                aLi[i].onclick = function(){
+                    aLi[index].className="";
+                    aLi[this.i].className="on";
+                    index=this.i;
+                   move(oUl,"left",pos[index]);
+                };
+        };
+        function move(obj , attr , target ){
+            var start = parseFloat( getStyle(obj , attr) );
+            target = parseFloat( target );
+            var timer = setInterval(function () {
+                start += (target-start)/10;
+                if ( Math.abs(start-target)<=5 ){
+                    start = target;
+                    clearInterval( timer );
+                }
+                oUl.style[attr] = start + 'px';
+            },13);
+             function getStyle(obj , atr) {
+                return obj.currentStyle?obj.currentStyle[atr]:getComputedStyle(obj)[atr];
+                }
+            }
+            auto();
+            function auto() {
+                timer = setInterval(function () {
+                    change(function () {
+                        index ++;
+                        index %= len;
+                    });
+                },3000);
+            };
+            function change( fn ) {
+                aLi[index].className="";
+                move(oUl,"left",pos[index]);
+                fn();
+                aLi[index].className="on";
+                move(oUl,"left",pos[index]);
+            };
+            oWrap.onmouseenter=function(){
+                clearInterval(timer);
+            };
+            oWrap.onmouseleave=function(){
+                auto();
+            };
+    </script>
+</body>
+</html>

@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title><![CDATA[轮播图]]></title>
+      <url>/2017/04/16/20170416/</url>
+      <content type="html"><![CDATA[<p>用js做的轮播图<br><a href="demo/index.html">在线展示</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 小案例 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[demo]]></title>
       <url>/2017/04/13/20170413/</url>
       <content type="html"><![CDATA[<pre><code>&apos;&lt;div class=&quot;wrap&quot;&gt;
