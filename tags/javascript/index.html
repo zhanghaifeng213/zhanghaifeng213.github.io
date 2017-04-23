@@ -7,7 +7,7 @@
 
     
 
-    <title>demo | 张海峰的博客</title>
+    <title>javascript | 张海峰的博客</title>
     <meta name="author" content="张海峰">
     
     <meta name="description" content="看书 学习">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="demo"/>
+    
     <meta property="og:site_name" content="张海峰的博客"/>
 
     
@@ -172,7 +172,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/技术/">
-                    技术 <span class="right">1 篇</span></a>
+                    技术 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -189,6 +189,14 @@
             <li class="collapse-level-2" collapse-level="2">
                 <a class="no-padding" href="/categories/技术/html/css/">
                     css <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/技术/javascript/">
+                    javascript <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -217,122 +225,30 @@
 
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
+    
+
+<nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（分类目录）</span>
-        
-            
-
+        <span class="breadcrumb">当前位置（标签）</span>
         
 
+        
+            <a class="breadcrumb" href="/tags/javascript/">javascript</a>
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>demo</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2017-04-12T16:00:03.000Z"><a href="/2017/04/13/20170413/">2017-04-13</a></time>
-
-            <span id="busuanzi_container_page_pv" class="read-times-container">
-    <i class="fa fa-eye"></i>
-    <span id="busuanzi_value_page_pv"></span>
-</span>
-
-            
-    <div class="tags-row">
+    <div class="collection mt-0">
         
-            <a href="/tags/小案例/" class="chip pink lighten-1">小案例</a>
+            <a href="/2017/04/23/201704023/" class="collection-item grey-text text-darken-1">
+                <time datetime="2017-04-23T11:57:43.000Z">2017-04-23</time>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                鼠标事件
+            </a>
         
     </div>
-
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    
-</div>
-
-
-            <div class="entry pink-link-context">
-                <pre><code>&apos;&lt;div class=&quot;wrap&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;fir&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;sec&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/d.png&quot; &gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;thr&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;four&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/d.png&quot; &gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;five&quot;&gt;
-    &lt;img src=&quot;http://omolotm19.bkt.clouddn.com/0.png&quot; id=&quot;six&quot;&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    var oI1=document.getElementById(&quot;fir&quot;),
-        oI2=document.getElementById(&quot;sec&quot;),
-        oI3=document.getElementById(&quot;thr&quot;),
-        oI4=document.getElementById(&quot;four&quot;),
-        oI5=document.getElementById(&quot;five&quot;),
-        oI6=document.getElementById(&quot;six&quot;);
-        setInterval(goudan(),1000);
-        function goudan(){
-            var time=new Date(),
-                hh=time.getHours(),
-                mm=time.getMinutes(),
-                ss=time.getSeconds(),
-                a=Math.floor(hh/10),
-                b=Math.floor(hh%10),
-                c=Math.floor(mm/10),
-                d=Math.floor(mm%10),
-                e=Math.floor(ss/10),
-                f=Math.floor(ss%10),
-                oI=[oI1,oI2,oI3,oI4,oI5,oI6],
-                arr=[
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+a+&quot;.png&quot;,
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+b+&quot;.png&quot;,
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+c+&quot;.png&quot;,
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+d+&quot;.png&quot;,
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+e+&quot;.png&quot;,
-                    &quot;http://omolotm19.bkt.clouddn.com/&quot;+f+&quot;.png&quot;,
-                ];
-            for(i=0;i&lt;6;i++){
-                oI[i].src=&quot;images/&quot;+arr[i]+&quot;.png&quot;;
-            };
-            return goudan;
-        };
-&lt;/script&gt;&apos;
-</code></pre>
-                
-<p class="pink-link-context">
-    <a href="/2017/04/11/20170411/" rel="next" title="demo">
-    上一篇：demo
-  </a>
-</p>
-
-
-
-<p class="pink-link-context">
-    <a href="/2017/04/16/20170416/" rel="next" title="轮播图">
-    下一篇：轮播图
-  </a>
-</p>
-
-
-            </div>
-			
-        </div>
-    </div>
-</article>
-
-
-
-
 
 
 </div>

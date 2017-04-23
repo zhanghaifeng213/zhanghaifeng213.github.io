@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    *{margin:0;padding:0}
+    #box{
+        width:400px;
+        height:400px;
+        position:relative;
+        overflow:hidden;
+        border:1px solid #aaa;
+        margin:50px auto;
+    }
+    #box #context{
+        position:absolute;
+        left:0;
+        top:0;
+        width:370px;
+    }
+    #box #context p{
+        line-height:50px;
+        text-indent:2rem;
+    }
+    #box #scroll{
+        position:absolute;
+        right:0;
+        top:0;
+        width:30px;
+        height:400px;
+        background:linear-gradient(aqua,pink);
+    }
+    #box #scroll span{
+        position:absolute;
+        left:0;
+        top:0;
+        width:30px;
+        background:orange;
+        border-radius:10px;
+        cursor:pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="box">
+        <div id="context">
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        <p>4月23日9时，中国海军远航访问编队从上海黄浦江畔启航，赴亚洲、欧洲、非洲和大洋洲20余个国家进行友好访问，海军政治委员苗华到码头送行。今天，是人民海军成立68周年纪念日。</p>
+        </div>
+        <div id="scroll">
+            <span ></span>
+        </div>
+    </div>
+    <script>
+        var oBox=document.getElementById("box"),
+            oCon=document.getElementById("context"),
+            oScr=document.getElementById("scroll"),
+            oSpan=document.querySelector("#box #scroll span"),
+            oBoxH=oBox.offsetHeight,
+            oConH=oCon.offsetHeight,
+            y=oConH-oBoxH,
+            sTop;
+        oSpan.style.height=oBoxH*oBoxH/oConH+"px";
+        oSpan.onmousedown=function(e){
+            e=e||window.event;
+                sTop=oSpan.offsetTop;
+            var downY=e.clientY;
+            document.onmousemove=function(e){
+                var moveY=e.clientY;
+                sY=moveY-downY;
+                e=e||window.event;
+                var sH=sTop+sY,
+                sH=Math.min(sH,oBoxH-oSpan.offsetHeight);
+                sH=Math.max(sH,0);
+                cH=-sH/(oBoxH-oSpan.offsetHeight)*y;
+                oSpan.style.top=sH+"px";
+                oCon.style.top=cH+"px";
+            };
+            document.onmouseup=function(){
+                this.onmouseup=null;
+                this.onmousemove=null;
+            };
+        };
+        mouseWheel(document , function (e , d) {
+                sTop=oSpan.offsetTop;
+            var sH=sTop+d*10;
+                sH=Math.min(sH,oBoxH-oSpan.offsetHeight);
+                sH=Math.max(sH,0);
+                cH=-sH/(oBoxH-oSpan.offsetHeight)*y;
+                oSpan.style.top=sH+"px";
+                oCon.style.top=cH+"px";
+                } , false);
+
+                //封装一个兼容的滚轮事件添加方法
+                //接收三个参数：
+                //  第一个是要添加滚轮事件的对象，
+                //  第二个是一个函数（该函数可以拥有两个形参，第一个代表事件对象，第二代表滚轮方向，滚动方向大于0是往回拉，小于0往前推）
+                //  第三个参数是一个布尔值，传false时，可以阻止默认的滚轮事件
+                function mouseWheel(obj , eFn , bool) {
+                    obj.onmousewheel = Fn;
+                    document.addEventListener && obj.addEventListener("DOMMouseScroll" , Fn);
+                    function Fn(e) {
+                        e = e || window.event;
+                        var d = -e.wheelDelta/120 || e.detail/3;
+                        eFn.call(this,e,d);
+                        return bool;
+                    }
+                }
+        document.onselectstart = function () {
+            return false;
+        }
+    </script>
+</body>
+</html>

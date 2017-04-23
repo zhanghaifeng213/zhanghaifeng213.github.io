@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    #box{
+        width:100px;
+        height:100px;
+        background:pink;
+        cursor:move;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+</style>
+</head>
+<body>
+    <div id="box"></div>
+<script>
+    var oBox=document.getElementById("box"),
+        sLeft=oBox.offsetLeft,
+        sTop=oBox.offsetTop,
+        leftDown=oBox.offsetWidth,
+        topDown=oBox.offsetHeight;
+    window.onmousemove=function(e){
+        e.cancelBubble = true;
+        e=e||window.event;
+    if(e.clientX-sLeft>leftDown-20&&e.clientX-sLeft<leftDown&&e.clientY-sTop>topDown-20&&e.clientY-sTop<topDown){
+        oBox.style.cursor="pointer";
+        oBox.onmousedown=function(e){
+            e=e||window.event;
+            var xDown=e.clientX;
+            var yDown=e.clientY;
+            document.onmousemove=function(e){
+                e=e||window.event;
+                var xMove=e.clientX;
+                var yMove=e.clientY;
+                var x=xMove-xDown;
+                var y=yMove-yDown;
+                oBox.style.width=leftDown+x+"px";
+                oBox.style.height=topDown+y+"px";
+            };
+            document.onmouseup=function(){
+                leftDown=oBox.offsetWidth;
+                topDown=oBox.offsetHeight;
+                this.onmouseup=null;
+                this.onmousemove=null;
+            };
+        };
+    }else{
+        oBox.style.cursor="move";
+        oBox.onmousedown=function(e){
+            e=e||window.event;
+            var xDown=e.clientX;
+            var yDown=e.clientY;
+            document.onmousemove=function(e){
+                 e=e||window.event;
+                var xMove=e.clientX;
+                var yMove=e.clientY;
+                var x=xMove-xDown;
+                var y=yMove-yDown;
+                oBox.style.left=sLeft+x+"px";
+                oBox.style.top=sTop+y+"px";
+            };
+            document.onmouseup=function(){
+                sLeft=oBox.offsetLeft;
+                sTop=oBox.offsetTop;
+                this.onmouseup=null;
+                this.onmousemove=null;
+            };
+        };
+    };
+};
+
+</script>
+</body>
+</html>
