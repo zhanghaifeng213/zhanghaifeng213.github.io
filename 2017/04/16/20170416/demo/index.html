@@ -20,7 +20,7 @@
         overflow:hidden;
     }
     #wrap #iWap{
-        width:4140px;
+        width:4830px;
         height:400px;
         position:absolute;
         left:0;
@@ -63,6 +63,7 @@
             <img src="http://omolotm19.bkt.clouddn.com/slider01.jpg">
             <img src="http://omolotm19.bkt.clouddn.com/slider02.jpg">
             <img src="http://omolotm19.bkt.clouddn.com/slider03.jpg">
+            <img src="http://omolotm19.bkt.clouddn.com/slider001.jpg">
         </ul>
         <ul id="iLi">
             <li class="on"></li>
@@ -83,24 +84,26 @@
             index=0;
             for(i=0;i<len;i++){
                 pos[i]=-i*690;
-                aLi[i].i=i;
-                aLi[i].onclick = function(){
-                    aLi[index].className="";
-                    aLi[this.i].className="on";
-                    index=this.i;
+                aLi[index%(len-1)].onclick = function(){
+                    aLi[index%(len-1)].className="";
+                    index%=len;
+                    index++;
+                    aLi[index%(len-1)].className="on";
                    move(oUl,"left",pos[index]);
                 };
         };
-        function move(obj , attr , target ){
+        function move(obj , attr , target ,callBack){
             var start = parseFloat( getStyle(obj , attr) );
-            target = parseFloat( target );
+                target = parseFloat( target );
             var timer = setInterval(function () {
                 start += (target-start)/10;
-                if ( Math.abs(start-target)<=5 ){
-                    start = target;
-                    clearInterval( timer );
-                }
+                 if ( Math.abs(start-target)<=5 ){
+                    start = target;}
                 oUl.style[attr] = start + 'px';
+                if ( Math.abs(start-target)<=5 ){
+                    callBack&&callBack();
+                    clearInterval( timer );
+                };
             },13);
              function getStyle(obj , atr) {
                 return obj.currentStyle?obj.currentStyle[atr]:getComputedStyle(obj)[atr];
@@ -113,14 +116,18 @@
                         index ++;
                         index %= len;
                     });
-                },3000);
+                },2000);
             };
             function change( fn ) {
-                aLi[index].className="";
-                move(oUl,"left",pos[index]);
+                aLi[index%(len-1)].className="";
                 fn();
-                aLi[index].className="on";
-                move(oUl,"left",pos[index]);
+                aLi[index%(len-1)].className="on";
+                move(oUl,"left",pos[index],function(){
+                    if(index==6){
+                        oUl.style.left = 0;
+                        index=0;
+                    };
+                });
             };
             oWrap.onmouseenter=function(){
                 clearInterval(timer);
