@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Fly">
+    <title>Title</title>
+    <style>
+        *{ margin: 0; padding: 0; font-family:Microsoft yahei,serif;}
+        li{ list-style:none;}
+        #wrap{
+            border-collapse: collapse;
+            margin:50px auto 0;
+        }
+        #wrap td{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #wrap tr.true td{
+            background: #00bf6e;
+            color: #fff;
+        }
+        #wrap td.del{
+            cursor: pointer;
+        }
+        #wrap td.del:hover{
+            color:pink;
+        }
+        #box{
+            width: 700px;
+            margin: 20px auto;
+        }
+        #box p{
+            float:right;
+            width: 50px;
+            height: 25px;
+            background: #f60;
+            color: #fff;
+            line-height: 25px;
+            text-align: center;
+            font-weight: bold;
+            margin-left: 2px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <table id="wrap" border="1">
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>大狗子</td>
+                <td>A002</td>
+                <td>A003</td>
+                <td>A004</td>
+                <td class="del">删除</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>二狗子</td>
+                <td>A002</td>
+                <td>A003</td>
+                <td>A004</td>
+                <td class="del">删除</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>三狗子</td>
+                <td>A002</td>
+                <td>A003</td>
+                <td>A004</td>
+                <td class="del">删除</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="box">
+        <p>全选</p>
+        <p>全不选</p>
+        <p>反选</p>
+        <p>删除</p>
+        <p>新增</p>
+    </div>
+
+    <script>
+
+        (function () {
+            var oTBody = document.getElementById("wrap").children[0],
+                aTr,aDel,length;
+            var aBoxP = document.querySelectorAll("#box p");
+            getE();
+
+            //获取剩下的tr，以及td.del，以及对于的length
+            function getE(){
+                aTr = oTBody.querySelectorAll("tr"),
+                aDel = oTBody.querySelectorAll("tr td.del"),
+                length = aTr.length;
+            }
+
+            //tr的操作
+            function trc() {
+                for (var i = 0; i < length; i++) {
+                    aTr[i].ifCheck = false;
+                    aTr[i].onclick = function () {
+                        var cBox = this.children[0].children[0];
+                        cBox.checked = this.ifCheck = !this.ifCheck;
+                        this.className = this.ifCheck+'';
+                    };
+                }
+                for (i = 0; i < length; i++) {
+                    aDel[i].onclick = function (e) {
+                        e = e || window.event;
+                        e.cancelBubble = true;
+                        e.stopPropagation && e.stopPropagation();
+                        if ( confirm("确定删除？") ){
+                            var p = this.parentNode;
+                            p.parentNode.removeChild( p );
+                            getE();
+                        }
+                    };
+                }
+            };
+            trc();
+            //全选等操作
+            (function () {
+                //全选
+                aBoxP[0].onclick = function () {
+                    for (var i = 0; i < length; i++) {
+                        aTr[i].children[0].children[0].checked = aTr[i].ifCheck = true;
+                        aTr[i].className = "true";
+                    }
+                };
+                //全不选
+                aBoxP[1].onclick = function () {
+                    for (var i = 0; i < length; i++) {
+                        aTr[i].children[0].children[0].checked = aTr[i].ifCheck = false;
+                        aTr[i].className = "false";
+                    }
+                };
+                //反选
+                aBoxP[2].onclick = function () {
+                    for (var i = 0; i < length; i++) {
+                        aTr[i].children[0].children[0].checked = aTr[i].ifCheck = !aTr[i].ifCheck;
+                        aTr[i].className = aTr[i].ifCheck+"";
+                    }
+                };
+                //删除
+                aBoxP[3].onclick = function () {
+                    for (var i = 0; i < length; i++) {
+                        if ( aTr[i].ifCheck ){
+                            oTBody.removeChild( aTr[i] );
+                        }
+                    }
+                    getE();
+                };
+                aBoxP[4].onclick = function () {
+                    var x=0,
+                        arry=[],
+                        arry2=[];
+                    for (var i = 0; i < length; i++) {
+                        if ( aTr[i].ifCheck ){
+                            arry2[x]=aTr[i].innerHTML;
+                            x++;
+                        }
+                    };
+                    for(var i = 0; i < x; i++){
+                        arry[i]=document.createElement("tr");
+                        arry[i].innerHTML=arry2[i];
+                        arry[i].ifCheck = false;
+                        oTBody.appendChild(arry[i]);
+                    };
+                    getE();
+                    for (var i = 0; i < length; i++) {
+                        aTr[i].onclick = function () {
+                            var cBox = this.children[0].children[0];
+                            cBox.checked = this.ifCheck = !this.ifCheck;
+                            this.className = this.ifCheck+'';
+                        };
+                    };
+
+                }
+            })();
+             })();
+    </script>
+</body>
+</html>
