@@ -70,6 +70,7 @@
     <script>
         var aIn=document.getElementsByTagName("input");
         var length=aIn.length;
+        var ifEnd=true;
         var aT=document.getElementsByClassName("tip");
         var reg = {
             tel : /^1[3-8]\d{9}$/,
@@ -84,9 +85,15 @@
                 if(tUser){
                     aIn[0].style.border="1px solid green";
                     aT[0].style.display="none";
+                    ifEnd=true;
                 }else{
-                  aIn[0].focus();
-                  aT[0].style.display="block";
+                    ifEnd=false;
+                    aT[0].style.display="block";
+                    if(aIn[0].focus()){
+                      aIn[0].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[0].focus();},0);
+                    };
                 };
             }else{
                 aT[0].style.display="none";
@@ -97,12 +104,17 @@
             if(aIn[1].value!=""){
                 var ps=reg.pwd.test(aIn[1].value);
                 if(ps){
+                    ifEnd=true;
                     aIn[1].style.border="1px solid green";
                     aT[1].style.display="none";
                 }else{
-                  aIn[1].focus();
-                  aT[1].style.display="block";
-                };
+                    ifEnd=false;
+                    aT[1].style.display="block";
+                    if(aIn[1].focus()){
+                      aIn[1].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[1].focus();},0);
+                    };};
             }else{
                 aT[1].style.display="none";
                 aIn[1].style.border="1px solid #aaa";
@@ -112,13 +124,19 @@
             if(aIn[2].value!=""){
                 var mima=aIn[1].value;
                 if(mima===aIn[2].value){
+                    ifEnd=true;
                     aIn[2].style.border="1px solid green";
                     aT[2].style.display="none";
                 }else{
+                  ifEnd=false;
                   aIn[1].value="";
                   aIn[2].value="";
-                  aIn[1].focus();
                   aT[2].style.display="block";
+                    if(aIn[1].focus()){
+                      aIn[1].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[1].focus();},0);
+                    };
                 };
             }else{
                 aT[3].style.display="none";
@@ -131,11 +149,17 @@
             if(aIn[3].value!=""){
                var tel=reg.tel.test(aIn[3].value);
                 if(tel){
+                    ifEnd=true;
                     aIn[3].style.border="1px solid green";
                     aT[3].style.display="none";
                 }else{
-                  aIn[3].focus();
+                  ifEnd=false;
                   aT[3].style.display="block";
+                  if(aIn[3].focus()){
+                      aIn[3].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[3].focus();},0);
+                    };
                 };
             }else{
                 aT[3].style.display="none";
@@ -146,11 +170,17 @@
             if(aIn[4].value!=""){
                var mail=reg.mail.test(aIn[4].value);
                 if(mail){
+                    ifEnd=true;
                     aIn[4].style.border="1px solid green";
                     aT[4].style.display="none";
                 }else{
-                  aIn[4].focus();
+                  ifEnd=false;
                   aT[4].style.display="block";
+                  if(aIn[4].focus()){
+                      aIn[4].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[4].focus();},0);
+                    };
                 };
             }else{
                 aT[4].style.display="none";
@@ -161,11 +191,17 @@
             if(aIn[5].value!=""){
                var IDCard=reg.IDCard.test(aIn[5].value);
                 if(IDCard){
+                    ifEnd=true;
                     aIn[5].style.border="1px solid green";
                     aT[5].style.display="none";
                 }else{
-                  aIn[5].focus();
+                  ifEnd=false;
                   aT[5].style.display="block";
+                  if(aIn[5].focus()){
+                      aIn[5].focus();
+                    }else{
+                        window.setTimeout(function(){aIn[5].focus();},0);
+                    };
                 };
             }else{
                 aT[5].style.display="none";
@@ -179,7 +215,7 @@
                     pd=false;
                 }
             };
-            if(pd){
+            if(pd&&ifEnd){
                 aT[6].style.display="none";
             }else{
                 aT[6].style.display="block";
