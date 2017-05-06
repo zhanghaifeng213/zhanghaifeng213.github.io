@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhanghaifeng213.github.io/"/>
-  <updated>2017-05-01T15:04:30.284Z</updated>
+  <updated>2017-05-06T07:36:59.662Z</updated>
   <id>http://zhanghaifeng213.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>表单验证</title>
+    <link href="http://zhanghaifeng213.github.io/2017/05/06/20170506/"/>
+    <id>http://zhanghaifeng213.github.io/2017/05/06/20170506/</id>
+    <published>2017-05-06T07:36:23.000Z</published>
+    <updated>2017-05-06T07:36:59.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>用正则做的表单验证<br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用正则做的表单验证&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="javascript" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://zhanghaifeng213.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>飞机大战</title>
