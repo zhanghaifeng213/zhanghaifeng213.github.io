@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>jsonp</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    *{margin:0;padding:0;list-style-type:none;}
+    #box{
+        width:300px;
+        margin:50px auto;
+    }
+    #search{
+        width:298px;
+        height:40px;
+        font-size:16px;
+        text-indent:10px;
+    }
+    #list li{
+        height:25px;
+        line-height:25px;
+        text-indent:10px;
+        font-size:12px;
+    }
+    #list li a{
+        display:block;
+        color:#000;
+        text-decoration: none;
+    }
+    #list li a:hover{
+        background:pink;
+    }
+</style>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="search">
+        <ul id="list">
+        </ul>
+    </div>
+    <script>
+        var oList=document.getElementById("list"),
+            oSearch=document.getElementById("search");
+        oSearch.onkeyup=function(e){
+            e=e||window.event;
+            var val=this.value;
+            if(val){
+                if(e.keyCode===13){
+                    window.open("https://www.baidu.com/s?wd="+val);
+                };
+                var oS=document.createElement("script");
+                oS.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=fly";
+                document.body.appendChild(oS);
+                oS.onload=function(){
+                    document.body.removeChild(this);
+                };
+            }else{
+                oList.innerHTML="";
+            };
+        };
+        oSearch.onblur=function(){
+            setTimeout(function(){
+                oList.innerHTML="";
+            },200)
+        };
+        oSearch.onfocus=function(){
+            var val=this.value;
+            if(val){
+                var oS=document.createElement("script");
+                oS.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=fly";
+                document.body.appendChild(oS);
+                oS.onload=function(){
+                    document.body.removeChild(this);
+                };
+            }
+        };
+        function fly(mJson){
+                    oList.innerHTML="";
+                    var s=mJson.s;
+                    for(var i=0;i<s.length;i++){
+                        var oLi=document.createElement("li");
+                        oLi.innerHTML="<a href='https://www.baidu.com/s?wd="+s[i]+"' target='_new'>"+s[i]+"</a>";
+                        oList.appendChild(oLi);
+                    };
+                };
+    </script>
+</body>
+</html>

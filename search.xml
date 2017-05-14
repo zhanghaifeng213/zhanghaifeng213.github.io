@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[通过jsonp，调用百度搜索]]></title>
+      <url>/2017/05/14/20170514/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p><a href="demo/index.html">在线展示</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[表单验证]]></title>
       <url>/2017/05/06/20170506/</url>
       <content type="html"><![CDATA[<p>用正则做的表单验证<br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
