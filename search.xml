@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[照片墙]]></title>
+      <url>/2017/05/22/20170522/</url>
+      <content type="html"><![CDATA[<p>用jQuery做的照片墙特效<br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术 </category>
+            
+            <category> jQuery </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> jQuery </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[通过jsonp，调用百度搜索]]></title>
       <url>/2017/05/14/20170514/</url>
       <content type="html"><![CDATA[<a id="more"></a>
