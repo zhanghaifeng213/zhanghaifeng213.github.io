@@ -2,6 +2,7 @@ body.noscroll{
     overflow:hidden;
 }
 /*背景*/
+body{}
 #bg{
     width:100%;
     min-width: 1280px;
@@ -221,23 +222,35 @@ body.noscroll{
 .newVersion{
     position:absolute;
     top:1026px;
+    left:0;
+    right:0;
+    margin:0 auto;
     height:600px;
     width:100%;
 }
 .newVersion .title,.game .title{
     position:absolute;
-    left:50%;
-    margin-left:-400px;
+    left:0;
+    right:0;
+    margin:0 auto;
     width:800px;
     height:150px;
     background:url(http://oqranm1om.bkt.clouddn.com/newVersion.png) no-repeat center top;
 }
 .newVersion .newVersionLi{
     position:absolute;
-    left:50%;
     top:150px;
-    width:1281px;
-    margin-left:-640px;
+    width:100%;
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+.newVersion .newVersionLi ul{
+    width:1280px;
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
 }
 .newVersion .newVersionLi ul li{
     position:relative;
@@ -452,6 +465,9 @@ body.noscroll{
     top:0;
     opacity: 0;
     background:url(http://oqranm1om.bkt.clouddn.com/game.png) no-repeat center top;
+    left:0;
+    right:0;
+    margin:0 auto;
 }
 .game .bWrap{
     position:absolute;
@@ -463,11 +479,12 @@ body.noscroll{
 .game .banner{
     position:absolute;
     top:150px;
-    left:50%;
-    margin-left:-388px;
     width:776px;
     height:439px;
     perspective: 1000px;
+    left:0;
+    right:0;
+    margin:0 auto;
 }
 .game .banner ul{
     position:absolute;
