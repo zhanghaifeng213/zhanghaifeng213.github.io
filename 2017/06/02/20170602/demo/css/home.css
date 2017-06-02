@@ -4,6 +4,7 @@ body.noscroll{
 /*背景*/
 #bg{
     width:100%;
+    min-width: 1280px;
 }
 #bg .bg{
     width:100%;
