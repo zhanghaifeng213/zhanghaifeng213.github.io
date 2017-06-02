@@ -585,7 +585,7 @@ body.noscroll{
 .footer .fWrap{
     position:absolute;
     width:100%;
-    height:100%;
+    height:240px;
 }
 .footer .fWrap .p1{
     position:absolute;
