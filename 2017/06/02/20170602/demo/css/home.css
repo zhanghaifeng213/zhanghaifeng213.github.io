@@ -1,0 +1,697 @@
+body.noscroll{
+    overflow:hidden;
+}
+/*背景*/
+#bg{
+    width:100%;
+    min-width:1280px;
+}
+#bg .bg{
+    width:100%;
+    background-position:top center;
+    background-repeat:no-repeat;
+}
+#bg .bg1{
+    height:1026px;
+    background-image:url("http://oqranm1om.bkt.clouddn.com/bg1.jpg");
+    background-position: center -54px;
+}
+#bg .bg1 .flash{
+    opacity: 0;
+}
+#bg .bg2{
+    height:1080px;
+    background-image:url("http://oqranm1om.bkt.clouddn.com/bg2.jpg");
+}
+#bg .bg3{
+    height:534px;
+    background-image:url("http://oqranm1om.bkt.clouddn.com/bg3.jpg");
+}
+/*首屏*/
+#wrap{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:1080px;
+}
+/*左上角*/
+#wrap .yss{
+    position:absolute;
+    left:-200px;
+    top:20px;
+    width:140px;
+    height:115px;
+    opacity: 0;
+}
+#wrap .yss .left{
+    float:left;
+}
+#wrap .yss .right{
+    float:right;
+    width:90px;
+    height:90px;
+    border:2px solid #fff;
+    border-radius:10px;
+}
+#wrap .yss .right img{
+    width:90px;
+    height:90px;
+}
+/*右上角*/
+#wrap .jrgw{
+    position:absolute;
+    right:-200px;
+    top:30px;
+    width:177px;
+    height:45px;
+    border-radius:10px;
+    opacity: 0;
+}
+#wrap .jrgw img{
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+}
+#wrap .jrgw img.on{
+    display:block;
+}
+#wrap .xsjj{
+    position:absolute;
+    right:50px;
+    bottom:0px;
+    width:340px;
+    height:521px;
+    opacity: 0;
+}
+/*扫一扫，下载游戏*/
+#wrap .xiazai{
+    position:absolute;
+    bottom:40px;
+    right:140px;
+    width:340px;
+    height:130px;
+    font-size:16px;
+    opacity: 0;
+}
+#wrap .xiazai .weixin{
+    position:absolute;
+    left:0;
+    top:0px;
+    width:130px;
+    height:100%;
+    background-color: #ebd0ce;
+    border-radius:5px;
+}
+#wrap .xiazai .weixin p{
+    position:absolute;
+    left:5px;
+    top:-40px;
+    height:40px;
+    font-weight:bold;
+    line-height:40px;
+    color:#3d2672;
+}
+#wrap .xiazai .weixin .qr{
+    position:absolute;
+    left:5px;
+    top:5px;
+    width:120px;
+    height:120px;
+}
+#wrap .xiazai .weixin .line{
+    position:absolute;
+    left:-6px;
+    animation:move 2s linear infinite;
+}
+/*微信扫描动画*/
+@keyframes move{
+    from{top:1px;}
+    to{top:112px;}
+}
+#wrap .xiazai .shouji{
+    width:205px;
+    height:130px;
+}
+#wrap .xiazai .shouji .iphone{
+    position:absolute;
+    right:0;
+    top:0px;
+    width:205px;
+    height:61px;
+    background:url(http://oqranm1om.bkt.clouddn.com/iphone.png);
+}
+#wrap .xiazai .shouji .android{
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:205px;
+    height:61px;
+    background:url(http://oqranm1om.bkt.clouddn.com/android.png);
+    background-color:#000;
+    opacity: 0.8;
+    transition:0.5s opacity;
+}
+#wrap .xiazai .shouji .android:hover{
+    background-color:#000;
+    opacity: 1;
+}
+/*flash播放*/
+#wrap .play{
+    position:absolute;
+    right:350px;
+    bottom:500px;
+    width:163px;
+    height:115px;
+    background:url("http://oqranm1om.bkt.clouddn.com/playBg.png") no-repeat 0px -2px;
+}
+#wrap .play img{
+    position:absolute;
+    right:0;
+    opacity: 0;
+}
+#wrap .videoWrap{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    background:rgba(0,0,0,.8);
+    z-index: 3;
+}
+#wrap .videoWrap .video{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:800px;
+    height:450px;
+    margin-left:-400px;
+    margin-top:-225px;
+}
+#wrap .videoWrap .video .close, .newVersion .popwindow .content .close{
+    position:absolute;
+    right:-40px;
+    top:0;
+    background: url(http://oqranm1om.bkt.clouddn.com/close.png);
+    width:34px;
+    height:34px;
+    transition:1s transform;
+}
+#wrap .videoWrap .video .close:hover,.newVersion .popwindow .content .close:hover{
+    transform:rotate(180deg);
+}
+/*鼠标指示*/
+#wrap .mouse{
+    width:30px;
+    height:70px;
+    position: absolute;
+    left:50%;
+    margin-left:-15px;
+    background:url(http://oqranm1om.bkt.clouddn.com/mouse.png);
+    animation:mouseMove 1.5s infinite;
+}
+/*鼠标图标动画*/
+@keyframes mouseMove{
+    from{bottom:230px;opacity: 1}
+    to{bottom:170px;opacity: 0;}
+}
+/*新版本情报*/
+.newVersion{
+    position:absolute;
+    top:1026px;
+    height:600px;
+    width:100%;
+}
+.newVersion .title,.game .title{
+    position:absolute;
+    left:50%;
+    margin-left:-400px;
+    width:800px;
+    height:150px;
+    background:url(http://oqranm1om.bkt.clouddn.com/newVersion.png) no-repeat center top;
+}
+.newVersion .newVersionLi{
+    position:absolute;
+    left:50%;
+    top:150px;
+    width:1281px;
+    margin-left:-640px;
+}
+.newVersion .newVersionLi ul li{
+    position:relative;
+    float:left;
+    width:418px;
+    height:213px;
+    margin:11px 4px;
+    cursor:pointer;
+    background-repeat: no-repeat;
+    background-position-y:17px;
+}
+.newVersion .newVersionLi ul li:hover{
+    background-position-y:0px;
+}
+.newVersion .newVersionLi ul li:hover i{
+    animation-fill-mode: forwards !important;
+}
+.newVersion .newVersionLi ul li:hover .i1{
+    animation:i1 0.2s 0s linear 1;
+}
+.newVersion .newVersionLi ul li:hover .i2{
+    animation:i2 0.09s 0.2s linear 1;
+}
+.newVersion .newVersionLi ul li:hover .i3{
+    animation:i1 0.2s 0.29s linear 1;
+}
+.newVersion .newVersionLi ul li:hover .i4{
+    animation:i2 0.09s 0.49s linear 1;
+}
+.newVersion .newVersionLi ul li.l1{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l1.png)
+}
+.newVersion .newVersionLi ul li.l2{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l2.png)
+}
+.newVersion .newVersionLi ul li.l3{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l3.png)
+}
+.newVersion .newVersionLi ul li.l4{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l4.png)
+}
+.newVersion .newVersionLi ul li.l5{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l5.png)
+}
+.newVersion .newVersionLi ul li.l6{
+    background-image:url(http://oqranm1om.bkt.clouddn.com/l6.png)
+}
+.newVersion .newVersionLi ul li i{
+    position:absolute;
+    background:#a57e4c;
+}
+.newVersion .newVersionLi ul li .i1,.newVersion .newVersionLi ul li .i3{
+    width:0px;
+    height:2px;
+}
+.newVersion .newVersionLi ul li .i2,.newVersion .newVersionLi ul li .i4{
+    width:2px;
+    height:0px;
+}
+.newVersion .newVersionLi ul li .i1{
+    top:9px;
+    left:9px;
+}
+.newVersion .newVersionLi ul li .i2{
+    top:9px;
+    right:9px;
+}
+.newVersion .newVersionLi ul li .i3{
+    bottom:24px;
+    right:9px;
+}
+.newVersion .newVersionLi ul li .i4{
+    bottom:24px;
+    left:9px;
+}
+/*弹窗*/
+.newVersion .popwindow{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    z-index:2;
+    opacity: 0;
+}
+.newVersion .popwindow .content{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width:1180px;
+    height:735px;
+    margin:auto;
+}
+.newVersion .popwindow .content .close{
+    position:absolute;
+    right:70px;
+    top:90px;
+}
+.newVersion .popwindow .content .btn{
+    position:absolute;
+    top:50%;
+    width:70px;
+    height:36px;
+}
+.newVersion .popwindow .content .left{
+    left:0px;
+    background: url(http://oqranm1om.bkt.clouddn.com/left.png) no-repeat 20px 0;
+}
+.newVersion .popwindow .content .right{
+    right:0px;
+    background: url(http://oqranm1om.bkt.clouddn.com/right.png) no-repeat;
+}
+.newVersion .popwindow .content .left:hover{
+    animation:bgmoveL 1s infinite;
+}
+.newVersion .popwindow .content .right:hover{
+    animation:bgmoveR 1s infinite;
+}
+@keyframes bgmoveL{
+    0%{background-position:25px 0;}
+    80%{background-position:0px 0;}
+    100%{background-position:25px 0;}
+}
+@keyframes bgmoveR{
+    0%{background-position:0px 0;}
+    80%{background-position:25px 0;}
+    100%{background-position:0px 0;}
+}
+.newVersion .popwindow .content ul li{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    margin:-30px 0 0 -70px;
+}
+.newVersion .popwindow .content ul li .txt{
+    position: relative;
+    width:440px;
+    height:315px;
+    margin:230px 0 0 550px;
+    overflow: hidden;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt{
+    position: absolute;
+    width:410px;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt p{
+    line-height: 35px;
+    font-size:16px;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt .boldRed{
+    color:#e5402a;
+    font-weight:bold;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt .boldBlack{
+    color:#000;
+    font-weight:bold;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt .red{
+    color:#e5402a;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt .normal{
+    color:#393939;
+}
+.newVersion .popwindow .content ul li .txt .mainTxt .mBottom{
+    margin-bottom: 35px;
+}
+.newVersion .popwindow .content ul li .txt .scroll{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 8px;
+    background: #e2e2e2;
+    opacity: 0;
+    transition:0.5s;
+}
+.newVersion .popwindow .content ul li .txt:hover .scroll{
+    opacity: 1;
+}
+.newVersion .popwindow .content ul li .txt .scroll .bar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background: #000;
+}
+/*i1,i3的动画*/
+@keyframes i1{
+    from{width:0}
+    to{width:400px}
+}
+/*i2,i4的动画*/
+@keyframes i2{
+    from{height:0}
+    to{height:180px}
+}
+/*游戏特色*/
+.game{
+    position: absolute;
+    left:0;
+    top:1726px;
+    width:100%;
+    height:100px;
+}
+.game .title{
+    position:absolute;
+    top:0;
+    opacity: 0;
+    background:url(http://oqranm1om.bkt.clouddn.com/game.png) no-repeat center top;
+}
+.game .bWrap{
+    position:absolute;
+    top:0px;
+    opacity: 0;
+    width:100%;
+    height:100%;
+}
+.game .banner{
+    position:absolute;
+    top:150px;
+    left:50%;
+    margin-left:-388px;
+    width:776px;
+    height:439px;
+    perspective: 1000px;
+}
+.game .banner ul{
+    position:absolute;
+}
+.game .banner ul li{
+    position:absolute;
+    display:none;
+    transform-style: preserve-3d;
+    transition:0.5s;
+}
+.game .banner ul li.on{
+    left: 0;
+    top: 0;
+    display:block;
+    z-index:1;
+    opacity: 1;
+}
+.game .banner ul li.next{
+    left:-340px;
+    transform:translateZ(-600px) rotateY(50deg);
+    display:block;
+    opacity: 0.5;
+}
+.game .banner ul li.last{
+    left:340px;
+    transform:translateZ(-600px) rotateY(-50deg);
+    display:block;
+    opacity: 0.5;
+}
+.game .banner .btn{
+    position:absolute;
+    top:50%;
+    width:42px;
+    height:82px;
+    margin-top:-42px;
+    opacity: 1;
+    transition:opacity 0.3s;
+}
+.game .banner .btn:hover{
+    opacity: 0.5;
+}
+.game .banner .left{
+    left:-200px;
+    background:url(http://oqranm1om.bkt.clouddn.com/leftbtn.png);
+}
+.game .banner .right{
+    right:-200px;
+    background:url(http://oqranm1om.bkt.clouddn.com/rightbtn.png);
+}
+.game .banner ul li i{
+    position:absolute;
+    background:#fff;
+}
+.game .banner ul li .i1,.game .banner ul li .i3{
+    width:746px;
+    height:2px;
+}
+.game .banner ul li .i2,.game .banner ul li .i4{
+    width:2px;
+    height:411px;
+}
+.game .banner ul li .i1{
+    top:15px;
+    left:15px;
+}
+.game .banner ul li .i2{
+    top:15px;
+    right:15px;
+}
+.game .banner ul li .i3{
+    bottom:15px;
+    right:15px;
+}
+.game .banner ul li .i4{
+    bottom:15px;
+    left:15px;
+}
+.game .banner ul li.on i{
+    animation-fill-mode: forwards !important;
+}
+.game .banner ul li.on .i1{
+    width:0;
+    animation:li1 0.36s 0.3s linear 1;
+}
+.game .banner ul li.on .i2{
+    height:0;
+    animation:li2 0.2s 0.66s linear 1;
+}
+.game .banner ul li.on .i3{
+    width:0;
+    animation:li1 0.36s 0.86s linear 1;
+}
+.game .banner ul li.on .i4{
+    height:0;
+    animation:li2 0.2s 1.22s linear 1;
+}
+/*i1,i3的动画*/
+@keyframes li1{
+    from{width:0}
+    to{width:746px}
+}
+/*i2,i4的动画*/
+@keyframes li2{
+    from{height:0}
+    to{height:411px}
+}
+/*底部*/
+.footer{
+    position:absolute;
+    top:2400px;
+    left:0;
+    height:240px;
+    width:100%;
+}
+.footer .fWrap{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.footer .fWrap .p1{
+    position:absolute;
+    left:50%;
+    top:0;
+    margin-left:-295px;
+    width:590px;
+    height:40px;
+}
+.footer .fWrap .p1 span:first-of-type{
+    margin:0;
+    font-size:12px;
+}
+.footer .fWrap .p1 span:nth-of-type(7){
+    cursor:pointer;
+    position:relative;
+}
+.footer .fWrap .p1 span:nth-of-type(7):hover .gd{
+    display: block;
+}
+.footer .fWrap .p1 span{
+    font-size:14px;
+    color:#666;
+    display: inline-block;
+    margin-left:20px;
+    line-height:40px;
+}
+.footer .fWrap .p1 span a{
+    font-size:14px;
+    color:#666;
+}
+.footer .fWrap .p1 span a:hover{
+    color:#666;
+    opacity: 0.8;
+}
+.footer .fWrap .p1 span i{
+    font-size:16px;
+    display:inline-block;
+    color:#120813;
+    width:20px;
+    height:20px;
+    background:#666;
+    border-radius:50%;
+    text-align: center;
+    line-height:18px;
+    margin-right:5px;
+}
+.footer .fWrap .p1 .gd{
+    position:absolute;
+    top:13px;
+    right:-200px;
+    z-index:1;
+    width:190px;
+    height:60px;
+    padding: 5px;
+    background: #fff;
+    display: none;
+}
+.footer .fWrap .gd a{
+    float:left;
+    width:90px;
+    height:25px;
+    color:#333;
+    margin:2px;
+    line-height:25px;
+}
+.footer .fWrap .gd a:hover{
+    color:#000;
+    background: #f0f0f0;
+}
+.footer .fWrap .footerBottom{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:180px;
+    font-size:12px;
+    color:#666;
+    background:#171020;
+}
+
+.footer .footerBottom .wangyi{
+    width:800px;
+    height:60px;
+    margin:30px auto 0;
+}
+.footer .fWrap .footerBottom .wrap{
+    width:800px;
+    margin:0 auto;
+}
+.footer .footerBottom .wangyi .left{
+    float: left;
+}
+.footer .footerBottom .wangyi .right{
+    float: right;
+}
+.footer .footerBottom .wangyi .right p{
+    line-height:25px;
+}
+.footer .footerBottom .wangyi .right p a,.footer .footerBottom .pb a{
+    line-height:25px;
+    color:#666;
+}
+.footer .footerBottom .wangyi .right p a:hover,.footer .footerBottom .pb a:hover{
+    color:#ccc;
+    text-decoration: underline;
+}
+.footer .footerBottom .pb{
+    line-height:25px;
+}

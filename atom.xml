@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhanghaifeng213.github.io/"/>
-  <updated>2017-05-22T15:55:09.318Z</updated>
+  <updated>2017-06-02T15:19:17.263Z</updated>
   <id>http://zhanghaifeng213.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仿阴阳师游戏官网</title>
+    <link href="http://zhanghaifeng213.github.io/2017/06/02/20170602/"/>
+    <id>http://zhanghaifeng213.github.io/2017/06/02/20170602/</id>
+    <published>2017-06-02T14:59:44.422Z</published>
+    <updated>2017-06-02T15:19:17.263Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="&quot;http://oqranm1om.bkt.clouddn.com/bg1.jpg&quot;" alt="alt text"><br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;&amp;quot;http://oqranm1om.bkt.clouddn.com/bg1.jpg&amp;quot;&quot; alt=&quot;alt text&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="jQuery" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/jQuery/"/>
+    
+    
+      <category term="jQuery" scheme="http://zhanghaifeng213.github.io/tags/jQuery/"/>
+    
+  </entry>
   
   <entry>
     <title>照片墙</title>
