@@ -153,6 +153,7 @@ body{}
     background-color:#000;
     opacity: 0.8;
     transition:0.5s opacity;
+    border-radius:5px;
 }
 #wrap .xiazai .shouji .android:hover{
     background-color:#000;
@@ -465,9 +466,6 @@ body{}
     top:0;
     opacity: 0;
     background:url(http://oqranm1om.bkt.clouddn.com/game.png) no-repeat center top;
-    left:0;
-    right:0;
-    margin:0 auto;
 }
 .game .bWrap{
     position:absolute;
