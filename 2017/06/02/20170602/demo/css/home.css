@@ -475,8 +475,11 @@ body{}
     height:100%;
 }
 .game .bWrap .marginAuto{
-    width:1280px;
+    position:relative;
+    left:0;
+    right:0;
     margin:0 auto;
+    width:1280px;
 }
 .game .banner{
     position:absolute;
