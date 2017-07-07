@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[仿阴阳师游戏官网]]></title>
       <url>/2017/06/02/20170602/</url>
-      <content type="html"><![CDATA[<p><img src="http://oqranm1om.bkt.clouddn.com/bg1.jpg" alt="阴阳师"><br><a id="more"></a><br><a href="demo/home.html">在线展示</a></p>
+      <content type="html"><![CDATA[<p><img src="http://oqranm1om.bkt.clouddn.com/bg1.jpg" alt="阴阳师"><br><a id="more"></a><br>1.用jQuery仿阴阳师官网做的两个页面home.html和index.html<br>2.点击在线展示首先查看的是home页面<br>3.在home页面点击右上角进入官网按钮查看index页面<br>4.在index页面中点击左上角“阴阳师图标”区块跳转回home页面<br><a href="demo/home.html">在线展示</a></p>
 ]]></content>
       
         <categories>
