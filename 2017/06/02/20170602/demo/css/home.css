@@ -610,6 +610,7 @@ body.noscroll{
     left:0;
     height:240px;
     width:100%;
+    overflow: hidden;
 }
 .footer .fWrap{
     position:absolute;
