@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhanghaifeng213.github.io/"/>
-  <updated>2017-07-07T03:11:02.709Z</updated>
+  <updated>2017-10-22T13:32:55.059Z</updated>
   <id>http://zhanghaifeng213.github.io/</id>
   
   <author>
@@ -16,13 +16,133 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>canvasBlock</title>
+    <link href="http://zhanghaifeng213.github.io/2017/10/22/canvasBlock/"/>
+    <id>http://zhanghaifeng213.github.io/2017/10/22/canvasBlock/</id>
+    <published>2017-10-22T13:20:22.000Z</published>
+    <updated>2017-10-22T13:32:55.059Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://zhanghf.coding.me/canvasClock" alt="Canvas时钟"><br><a id="more"></a><br>`<br>&lt;!DOCTYPE html&gt;</p>
+<html><br><head><br><meta charset="utf-8"><br><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br><title>时钟</title><br><meta name="description" content=""><br><meta name="keywords" content=""><br><link href="" rel="stylesheet"><br><style><br>    <em>{margin:0;padding: 0;}<br>    body{text-align: center;}<br></style><br></head><br><body><br>    <canvas id="canvas" width="500" height="500"></canvas><br>    <script type="text/javascript"><br>        var canvas = document.getElementById(‘canvas’);<br>        var c = canvas.getContext(‘2d’);<br>        function drawClock(){<br>            // 清除画布<br>            c.clearRect(0,0,500,500);<br><br>            // 获取时间<br>            var time = new Date(),<br>                hour = time.getHours(),<br>                min = time.getMinutes(),<br>                sec = time.getSeconds();<br>                min=min+sec/60;<br>                hour=hour+min/60;<br>                hour=hour&gt;12?hour-12:hour;<br><br>            var linearGradient = c.createLinearGradient(50,50,450,450);<br>            linearGradient.addColorStop(0,”red”);<br>            linearGradient.addColorStop(0.2,”orange”);<br>            linearGradient.addColorStop(0.4,”lime”);<br>            linearGradient.addColorStop(0.6,”aqua”);<br>            linearGradient.addColorStop(0.8,”blue”);<br>            linearGradient.addColorStop(1,”pink”);<br>            // 绘制表盘<br>            c.beginPath();<br>            c.lineWidth = 10;<br>            c.strokeStyle = linearGradient;<br>            c.arc(250,250,200,0,Math.PI</em>2,true);<br>            c.stroke();<br>            c.closePath();<br><br>            // 绘制刻度<br>            for (var i=0;i<12;i++) {
+                c.save();
+                c.lineWidth = 7;
+                c.translate(250,250);
+                c.rotate(30*i*Math.PI/180);
+                c.beginPath();
+                c.moveTo(0,-170);
+                c.lineTo(0,-190);
+                c.stroke();
+                c.restore();
+            }
+            // 绘制分钟刻度
+            for (var i=0;i<60;i++) {
+                c.save();
+                c.lineWidth = 3;
+                c.translate(250,250);
+                c.rotate(6*i*Math.PI/180);
+                c.beginPath();
+                c.moveTo(0,-170);
+                c.lineTo(0,-180);
+                c.stroke();
+                c.restore();
+            }
+            //绘制数字
+            for(var i=1;i<13;i++){
+                c.save();
+                c.translate(250,250);
+                c.fillStyle = linearGradient;
+                c.textAlign='center';
+                c.font='30px 楷体';
+                var x=Math.sin(i*30*Math.PI/180)*150;
+                var y=-Math.cos(i*30*Math.PI/180)*150+10;
+                c.beginPath();
+                c.closePath();
+                c.fillText(i,x,y);
+                c.restore();
+            }
+            // 绘制时针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 5;
+            c.translate(250,250);
+            c.rotate((hour*30+180)*Math.PI/180);
+            c.moveTo(0,-20);
+            c.lineTo(0,80);
+            c.lineTo(10,80);
+            c.lineTo(0,100);
+            c.lineTo(-10,80);
+            c.lineTo(0,80);
+            c.stroke();
+            c.restore();
+            // 绘制分针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 4;
+            c.translate(250,250);
+            c.rotate((min*6+180)*Math.PI/180);
+            c.moveTo(0,-20);
+            c.lineTo(0,100);
+            c.lineTo(10,100);
+            c.lineTo(0,120);
+            c.lineTo(-10,100);
+            c.lineTo(0,100);
+            c.stroke();
+            c.restore();
+            //绘制秒针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 3;
+            c.translate(250,250);
+            c.rotate((sec*6+180)*Math.PI/180);
+            c.moveTo(0,-30);
+            c.lineTo(0,120);
+            c.lineTo(10,120);
+            c.lineTo(0,140);
+            c.lineTo(-10,120);
+            c.lineTo(0,120);
+            c.stroke();
+            c.restore();
+
+            // 绘制圆心
+            c.save();
+            c.beginPath();
+            c.fillStyle = 'red';
+            c.arc(250,250,10,0,Math.PI*2,true);
+            c.fill();
+            c.closePath();
+            c.restore();
+            window.requestAnimationFrame(drawClock);
+        };
+        drawClock();
+
+    </script><br></body><br></html>
+
+<p>`<br><a href="http://zhanghf.coding.me/canvasClock" target="_blank" rel="external">在线展示</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://zhanghf.coding.me/canvasClock&quot; alt=&quot;Canvas时钟&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="H5" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/H5/"/>
+    
+    
+      <category term="H5" scheme="http://zhanghaifeng213.github.io/tags/H5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>仿阴阳师游戏官网</title>
     <link href="http://zhanghaifeng213.github.io/2017/06/02/20170602/"/>
     <id>http://zhanghaifeng213.github.io/2017/06/02/20170602/</id>
-    <published>2017-06-02T14:59:44.422Z</published>
-    <updated>2017-07-07T03:11:02.709Z</updated>
+    <published>2017-06-02T14:59:44.423Z</published>
+    <updated>2017-10-22T13:32:58.084Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://oqranm1om.bkt.clouddn.com/bg1.jpg" alt="阴阳师"><br><a id="more"></a><br>1.用jQuery仿阴阳师官网做的两个页面home.html和index.html<br>2.点击在线展示首先查看的是home页面<br>3.在home页面点击右上角进入官网按钮查看index页面<br>4.在index页面中点击左上角“阴阳师图标”区块跳转回home页面<br><a href="demo/home.html">在线展示</a></p>
+    <content type="html"><![CDATA[<p><img src="http://oqranm1om.bkt.clouddn.com/bg1.jpg" alt="阴阳师"><br><a id="more"></a><br>1.用jQuery仿阴阳师官网做的两个页面home.html和index.html<br>2.点击在线展示首先查看的是home页面<br>3.在home页面点击右上角进入官网按钮查看index页面<br>4.在index页面中点击左上角“阴阳师图标”区块跳转回home页面<br><a href="http://zhanghf.coding.me/yinyangshi/home.html" target="_blank" rel="external">在线展示</a></p>
 ]]></content>
     
     <summary type="html">
@@ -44,7 +164,7 @@
     <title>照片墙</title>
     <link href="http://zhanghaifeng213.github.io/2017/05/22/20170522/"/>
     <id>http://zhanghaifeng213.github.io/2017/05/22/20170522/</id>
-    <published>2017-05-22T15:53:16.836Z</published>
+    <published>2017-05-22T15:53:16.837Z</published>
     <updated>2017-05-22T15:55:09.318Z</updated>
     
     <content type="html"><![CDATA[<p>用jQuery做的照片墙特效<br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
@@ -69,8 +189,8 @@
     <title>通过jsonp，调用百度搜索</title>
     <link href="http://zhanghaifeng213.github.io/2017/05/14/20170514/"/>
     <id>http://zhanghaifeng213.github.io/2017/05/14/20170514/</id>
-    <published>2017-05-14T07:31:27.388Z</published>
-    <updated>2017-05-14T07:37:22.867Z</updated>
+    <published>2017-05-14T07:31:27.389Z</published>
+    <updated>2017-05-14T07:37:22.868Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <p><a href="demo/index.html">在线展示</a></p>
@@ -148,7 +268,7 @@
     <link href="http://zhanghaifeng213.github.io/2017/04/26/201704026/"/>
     <id>http://zhanghaifeng213.github.io/2017/04/26/201704026/</id>
     <published>2017-04-26T13:47:42.000Z</published>
-    <updated>2017-04-26T13:51:24.953Z</updated>
+    <updated>2017-10-22T13:33:08.776Z</updated>
     
     <content type="html"><![CDATA[<p>复制表格<br><a id="more"></a><br><a href="demo/index.html">在线展示</a></p>
 ]]></content>
@@ -173,7 +293,7 @@
     <link href="http://zhanghaifeng213.github.io/2017/04/23/201704023/"/>
     <id>http://zhanghaifeng213.github.io/2017/04/23/201704023/</id>
     <published>2017-04-23T11:57:43.000Z</published>
-    <updated>2017-04-23T12:10:18.793Z</updated>
+    <updated>2017-10-22T13:33:04.295Z</updated>
     
     <content type="html"><![CDATA[<p>弹球，盒子拖拽，自定义滚动条<br><a id="more"></a><br>弹球<br><a href="demo/index.html">在线展示</a><br>盒子拖拽<br><a href="demo/index2.html">在线展示</a><br>自定义滚动条<br><a href="demo/index3.html">在线展示</a></p>
 ]]></content>
@@ -198,7 +318,7 @@
     <link href="http://zhanghaifeng213.github.io/2017/04/16/20170416/"/>
     <id>http://zhanghaifeng213.github.io/2017/04/16/20170416/</id>
     <published>2017-04-16T06:33:03.000Z</published>
-    <updated>2017-04-16T06:35:40.102Z</updated>
+    <updated>2017-10-22T13:33:11.474Z</updated>
     
     <content type="html"><![CDATA[<p>用js做的轮播图<br><a href="demo/index.html">在线展示</a></p>
 ]]></content>
@@ -220,7 +340,7 @@
     <link href="http://zhanghaifeng213.github.io/2017/04/09/20170409/"/>
     <id>http://zhanghaifeng213.github.io/2017/04/09/20170409/</id>
     <published>2017-04-08T18:42:57.000Z</published>
-    <updated>2017-04-13T15:32:12.600Z</updated>
+    <updated>2017-10-22T13:33:14.221Z</updated>
     
     <content type="html"><![CDATA[<p>机器猫<br><a id="more"></a><br>用div 定位 和 倒角做的简单静态页面布局<br><a href="demo/index.html">在线展示</a></p>
 ]]></content>

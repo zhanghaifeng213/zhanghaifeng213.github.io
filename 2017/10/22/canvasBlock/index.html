@@ -7,7 +7,7 @@
 
     
 
-    <title>css | 张海峰的博客</title>
+    <title>canvasBlock | 张海峰的博客</title>
     <meta name="author" content="张海峰">
     
     <meta name="description" content="看书 学习">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="canvasBlock"/>
     <meta property="og:site_name" content="张海峰的博客"/>
 
     
@@ -241,30 +241,190 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/H5/">H5</a>
+
 
         
-            <a class="breadcrumb" href="/categories/技术/html/css/">css</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>canvasBlock</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2017-10-22T13:20:22.000Z"><a href="/2017/10/22/canvasBlock/">2017-10-22</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/04/09/20170409/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-04-08T18:42:57.000Z">2017-04-09</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                demo
-            </a>
+            <a href="/tags/H5/" class="chip pink lighten-1">H5</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p><img src="http://zhanghf.coding.me/canvasClock" alt="Canvas时钟"><br><a id="more"></a><br>`<br>&lt;!DOCTYPE html&gt;</p>
+<html><br><head><br><meta charset="utf-8"><br><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br><title>时钟</title><br><meta name="description" content=""><br><meta name="keywords" content=""><br><link href="" rel="stylesheet"><br><style><br>    <em>{margin:0;padding: 0;}<br>    body{text-align: center;}<br></style><br></head><br><body><br>    <canvas id="canvas" width="500" height="500"></canvas><br>    <script type="text/javascript"><br>        var canvas = document.getElementById(‘canvas’);<br>        var c = canvas.getContext(‘2d’);<br>        function drawClock(){<br>            // 清除画布<br>            c.clearRect(0,0,500,500);<br><br>            // 获取时间<br>            var time = new Date(),<br>                hour = time.getHours(),<br>                min = time.getMinutes(),<br>                sec = time.getSeconds();<br>                min=min+sec/60;<br>                hour=hour+min/60;<br>                hour=hour&gt;12?hour-12:hour;<br><br>            var linearGradient = c.createLinearGradient(50,50,450,450);<br>            linearGradient.addColorStop(0,”red”);<br>            linearGradient.addColorStop(0.2,”orange”);<br>            linearGradient.addColorStop(0.4,”lime”);<br>            linearGradient.addColorStop(0.6,”aqua”);<br>            linearGradient.addColorStop(0.8,”blue”);<br>            linearGradient.addColorStop(1,”pink”);<br>            // 绘制表盘<br>            c.beginPath();<br>            c.lineWidth = 10;<br>            c.strokeStyle = linearGradient;<br>            c.arc(250,250,200,0,Math.PI</em>2,true);<br>            c.stroke();<br>            c.closePath();<br><br>            // 绘制刻度<br>            for (var i=0;i<12;i++) {
+                c.save();
+                c.lineWidth = 7;
+                c.translate(250,250);
+                c.rotate(30*i*Math.PI/180);
+                c.beginPath();
+                c.moveTo(0,-170);
+                c.lineTo(0,-190);
+                c.stroke();
+                c.restore();
+            }
+            // 绘制分钟刻度
+            for (var i=0;i<60;i++) {
+                c.save();
+                c.lineWidth = 3;
+                c.translate(250,250);
+                c.rotate(6*i*Math.PI/180);
+                c.beginPath();
+                c.moveTo(0,-170);
+                c.lineTo(0,-180);
+                c.stroke();
+                c.restore();
+            }
+            //绘制数字
+            for(var i=1;i<13;i++){
+                c.save();
+                c.translate(250,250);
+                c.fillStyle = linearGradient;
+                c.textAlign='center';
+                c.font='30px 楷体';
+                var x=Math.sin(i*30*Math.PI/180)*150;
+                var y=-Math.cos(i*30*Math.PI/180)*150+10;
+                c.beginPath();
+                c.closePath();
+                c.fillText(i,x,y);
+                c.restore();
+            }
+            // 绘制时针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 5;
+            c.translate(250,250);
+            c.rotate((hour*30+180)*Math.PI/180);
+            c.moveTo(0,-20);
+            c.lineTo(0,80);
+            c.lineTo(10,80);
+            c.lineTo(0,100);
+            c.lineTo(-10,80);
+            c.lineTo(0,80);
+            c.stroke();
+            c.restore();
+            // 绘制分针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 4;
+            c.translate(250,250);
+            c.rotate((min*6+180)*Math.PI/180);
+            c.moveTo(0,-20);
+            c.lineTo(0,100);
+            c.lineTo(10,100);
+            c.lineTo(0,120);
+            c.lineTo(-10,100);
+            c.lineTo(0,100);
+            c.stroke();
+            c.restore();
+            //绘制秒针
+            c.save();
+            c.beginPath();
+            c.lineWidth = 3;
+            c.translate(250,250);
+            c.rotate((sec*6+180)*Math.PI/180);
+            c.moveTo(0,-30);
+            c.lineTo(0,120);
+            c.lineTo(10,120);
+            c.lineTo(0,140);
+            c.lineTo(-10,120);
+            c.lineTo(0,120);
+            c.stroke();
+            c.restore();
+
+            // 绘制圆心
+            c.save();
+            c.beginPath();
+            c.fillStyle = 'red';
+            c.arc(250,250,10,0,Math.PI*2,true);
+            c.fill();
+            c.closePath();
+            c.restore();
+            window.requestAnimationFrame(drawClock);
+        };
+        drawClock();
+
+    </script><br></body><br></html>
+
+<p>`<br><a href="http://zhanghf.coding.me/canvasClock" target="_blank" rel="external">在线展示</a></p>
+
+                
+<p class="pink-link-context">
+    <a href="/2017/06/02/20170602/" rel="next" title="仿阴阳师游戏官网">
+    上一篇：仿阴阳师游戏官网
+  </a>
+</p>
+
+
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yODUzOC81MTA5">
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+
 
 
 </div>
