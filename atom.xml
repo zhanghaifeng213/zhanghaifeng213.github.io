@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhanghaifeng213.github.io/"/>
-  <updated>2018-03-11T05:36:03.010Z</updated>
+  <updated>2018-03-13T01:46:13.321Z</updated>
   <id>http://zhanghaifeng213.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue轮播图</title>
+    <link href="http://zhanghaifeng213.github.io/2018/03/13/20180313/"/>
+    <id>http://zhanghaifeng213.github.io/2018/03/13/20180313/</id>
+    <published>2018-03-13T01:42:42.000Z</published>
+    <updated>2018-03-13T01:46:13.321Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://y.gtimg.cn/music/photo_new/T003R720x288M000003RuwPY35SgmR.jpg" alt="Vue轮播图"><br><a id="more"></a><br>预览地址:<br><a href="http://zhanghf.coding.me/vue-music/" target="_blank" rel="external">http://zhanghf.coding.me/vue-music/</a></p>
+<p>简介：<br>用vue做的无缝轮播</p>
+<p><a href="http://zhanghf.coding.me/vue-music/" target="_blank" rel="external">在线展示</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://y.gtimg.cn/music/photo_new/T003R720x288M000003RuwPY35SgmR.jpg&quot; alt=&quot;Vue轮播图&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Vue" scheme="http://zhanghaifeng213.github.io/categories/%E6%8A%80%E6%9C%AF/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://zhanghaifeng213.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue仿饿了吗移动端项目</title>
