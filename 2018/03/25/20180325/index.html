@@ -7,7 +7,7 @@
 
     
 
-    <title>jQuery | 张海峰的博客</title>
+    <title>Vue-demo | 张海峰的博客</title>
     <meta name="author" content="张海峰">
     
     <meta name="description" content="看书 学习">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Vue-demo"/>
     <meta property="og:site_name" content="张海峰的博客"/>
 
     
@@ -249,36 +249,98 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/Vue/">Vue</a>
+
 
         
-            <a class="breadcrumb" href="/categories/技术/jQuery/">jQuery</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Vue-demo</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2018-03-25T15:08:50.000Z"><a href="/2018/03/25/20180325/">2018-03-25</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/06/02/20170602/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-06-02T14:59:44.423Z">2017-06-02</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                仿阴阳师游戏官网
-            </a>
-        
-            <a href="/2017/05/22/20170522/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-05-22T15:53:16.837Z">2017-05-22</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                照片墙
-            </a>
+            <a href="/tags/Vue/" class="chip pink lighten-1">Vue</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>把js的案列通过Vue实现<br><a id="more"></a><br><a href="http://vip.ihappy.net.cn/m/batchorder2.html" target="_blank" rel="external">js写法在线展示</a><br><a href="http://zhanghf.coding.me/vue-shopping/" target="_blank" rel="external">Vue写法在线展示</a></p>
+<p>Vue代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;</div><div class="line">&lt;title&gt;shopping&lt;/title&gt;</div><div class="line">&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</div><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;</div><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot;&gt;</div><div class="line">&lt;link href=&quot;&quot; rel=&quot;stylesheet&quot;&gt;</div><div class="line">&lt;script src=&quot;https://cdn.bootcss.com/vue/2.3.3/vue.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    *&#123;</div><div class="line">      margin: 0;</div><div class="line">      padding: 0;</div><div class="line">    &#125;</div><div class="line">    .title&#123;</div><div class="line">      margin:50px auto;</div><div class="line">      text-align: center</div><div class="line">    &#125;</div><div class="line">    table &#123;</div><div class="line">        border-collapse:collapse;</div><div class="line">        margin: 50px auto;</div><div class="line">    &#125;</div><div class="line">    td&#123;</div><div class="line">      text-align: center;</div><div class="line">    &#125;</div><div class="line">    td input.value&#123;</div><div class="line">      width:100%;</div><div class="line">      border: none;</div><div class="line">      text-align: center;</div><div class="line">    &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;app&quot;&gt;</div><div class="line">        &lt;div class=&quot;title&quot;&gt;</div><div class="line">          &lt;p&gt;title:&#123;&#123;data.title&#125;&#125;&lt;/p&gt;</div><div class="line">          &lt;p&gt;price:￥&#123;&#123;data.price&#125;&#125;元&lt;/p&gt;</div><div class="line">          &lt;p&gt;goodsno:&#123;&#123;data.goodsno&#125;&#125;&lt;/p&gt;</div><div class="line">          &lt;p&gt;brand:&#123;&#123;data.brand&#125;&#125;&lt;/p&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;table  ref=&quot;wrap&quot; width=&quot;98%&quot; border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;table-layout:fixed&quot;&gt;</div><div class="line">          &lt;tr&gt;</div><div class="line">            &lt;td&gt;颜色/尺码：&lt;/td&gt;</div><div class="line">            &lt;td v-for=&quot;(size,index) in menu.gray&quot;&gt;&#123;&#123;index&#125;&#125;&lt;/td&gt;</div><div class="line">            &lt;td&gt;小计&lt;/td&gt;</div><div class="line">          &lt;/tr&gt;</div><div class="line">          &lt;tr v-for=&quot;(color,index) in menu&quot; class=&quot;hang&quot;&gt;</div><div class="line">            &lt;td&gt;&#123;&#123;index&#125;&#125;&lt;/td&gt;</div><div class="line">            &lt;td v-for=&quot;size in color&quot;&gt;&lt;input class=&quot;value&quot; type=&quot;text&quot; :placeholder=&quot;size&quot; @change=&quot;hh(size)&quot;&gt;&lt;/td&gt;</div><div class="line">            &lt;td class=&quot;xiaoji&quot; ref=&quot;xiaoji&quot;&gt;&lt;/td&gt;</div><div class="line">          &lt;/tr&gt;</div><div class="line">          &lt;tr&gt;</div><div class="line">              &lt;td colspan=&quot;5&quot;&gt;总件数：&#123;&#123;zongji&#125;&#125;，总金额：￥&#123;&#123;zongji*data.price&#125;&#125;元。&lt;input type=&quot;button&quot; value=&quot;提交订单&quot; disabled=&quot;disabled&quot; class=&quot;submit&quot; @click=&quot;pay(zongji*data.price)&quot;&gt;&lt;/td&gt;</div><div class="line">          &lt;/tr&gt;</div><div class="line">        &lt;/table&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">    &lt;script&gt;</div><div class="line">        var data=&#123;</div><div class="line">          &apos;title&apos;:&apos;美丽的连衣裙&apos;,</div><div class="line">          &apos;price&apos;:100,</div><div class="line">          &apos;goodsno&apos;:&apos;test002&apos;,</div><div class="line">          &apos;brand&apos;:&apos;海贝&apos;,</div><div class="line">          &apos;menu&apos;:&#123;</div><div class="line">            &apos;gray&apos;:&#123;</div><div class="line">              &apos;m&apos;:166,</div><div class="line">              &apos;l&apos;:66,</div><div class="line">              &apos;s&apos;:6</div><div class="line">            &#125;,</div><div class="line">            &apos;red&apos;:&#123;</div><div class="line">                &apos;m&apos;:188,</div><div class="line">                &apos;l&apos;:88,</div><div class="line">                &apos;s&apos;:8</div><div class="line">            &#125;,</div><div class="line">            &apos;yellow&apos;:&#123;</div><div class="line">                &apos;m&apos;:199,</div><div class="line">                &apos;l&apos;:99,</div><div class="line">                &apos;s&apos;:9</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">        new Vue(&#123;</div><div class="line">            el: &apos;#app&apos;,</div><div class="line">            data() &#123;</div><div class="line">              return &#123;</div><div class="line">                 data:data,</div><div class="line">                 menu: data.menu,</div><div class="line">                 count: 0,</div><div class="line">                 sum: [0,0,0],</div><div class="line">                 value:[],</div><div class="line">                 zongji:0</div><div class="line">              &#125;;</div><div class="line">            &#125;,</div><div class="line">            methods: &#123;</div><div class="line">              hh(size)&#123;</div><div class="line">                let List = Array.from(this.$refs.wrap.getElementsByClassName(&apos;hang&apos;));</div><div class="line">                let xiaojisum = this.$refs.wrap.getElementsByClassName(&apos;xiaoji&apos;);</div><div class="line">                let submit = this.$refs.wrap.getElementsByClassName(&apos;submit&apos;);;</div><div class="line">                this.zongji =0;</div><div class="line">                for(let j=0;j&lt;List.length;j++)&#123;</div><div class="line">                  this.value[j]=List[j].getElementsByClassName(&apos;value&apos;);</div><div class="line">                  this.sum[j] = 0;</div><div class="line">                  for(let i=0;i&lt;this.value[j].length;i++)&#123;</div><div class="line">                    if(this.value[j][i].value*1&lt;0)&#123;</div><div class="line">                      this.value[j][i].value=0;</div><div class="line">                    &#125;else if(this.value[j][i].value&gt;size)&#123;</div><div class="line">                      this.value[j][i].value=size;</div><div class="line">                      alert(&apos;超出库存数量&apos;+size);</div><div class="line">                    &#125;</div><div class="line">                    this.sum[j]+=this.value[j][i].value*1;</div><div class="line">                  &#125;</div><div class="line">                  xiaojisum[j].innerHTML = this.sum[j];</div><div class="line">                  this.zongji += this.sum[j];</div><div class="line"></div><div class="line">                &#125;;</div><div class="line">                if(this.zongji)&#123;</div><div class="line">                  submit[0].disabled=false;</div><div class="line">                &#125;else&#123;</div><div class="line">                  submit[0].disabled=true;</div><div class="line">                &#125;</div><div class="line">              &#125;,</div><div class="line">              pay(total)&#123;</div><div class="line"></div><div class="line">                  alert(`共需付款$&#123;total&#125;元`);</div><div class="line"></div><div class="line">              &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p><a href="http://zhanghf.coding.me/vue-shopping/" target="_blank" rel="external">在线展示</a></p>
+
+                
+<p class="pink-link-context">
+    <a href="/2018/03/13/20180313/" rel="next" title="Vue轮播图">
+    上一篇：Vue轮播图
+  </a>
+</p>
+
+
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yODUzOC81MTA5">
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+
 
 
 </div>
